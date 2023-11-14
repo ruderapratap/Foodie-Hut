@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="10dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginBottom="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="10dp"
+                android:background="@color/white"
+                android:src="@drawable/pizza"
+                android:id="@+id/menu_image"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/menu_foodName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Veg Loaded Pizza"
+                android:textColor="@color/dark_black"
+                android:textSize="14sp"
+                android:maxLength="20"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/open_sans_samibold"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/ruppe_ic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/r"
+                        android:textSize="16sp"
+                        android:layout_marginStart="2dp"
+                        android:textColor="@color/green"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/open_sans_bold"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/menu_rupees"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:maxLength="7"
+                        android:text="@string/_250"
+                        android:layout_marginStart="1dp"
+                        android:textColor="@color/green"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/menuAddToCart"
+                    android:layout_width="60dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/addtocart_btn"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="@string/add"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>

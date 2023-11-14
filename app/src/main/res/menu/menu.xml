@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/foddie"
+        android:id="@+id/foddieFragment2"
+        android:icon="@drawable/foddie_ic"/>
+
+    <item android:title="@string/cart"
+        android:id="@+id/cartFragment2"
+        android:icon="@drawable/cart_ic"/>
+
+    <item android:title="@string/search"
+        android:id="@+id/searchFragment2"
+        android:icon="@drawable/search_ic"/>
+
+    <item android:title="@string/history"
+        android:id="@+id/historyFragment2"
+        android:icon="@drawable/history_icon"/>
+
+    <item android:title="@string/profile"
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/profile_ic"/>
+
+</menu>

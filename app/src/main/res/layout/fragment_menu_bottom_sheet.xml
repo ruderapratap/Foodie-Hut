@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.MenuBottomSheetFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="50dp"
+        android:layout_height="3dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:backgroundTint="#AAA9A9"
+        app:cardCornerRadius="5dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/spName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/cardView"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        android:fontFamily="@font/open_sans_samibold"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recViewCart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/spName"
+        android:scrollbars="none"
+        tools:listitem="@layout/popular_item"/>
+
+
+</RelativeLayout>

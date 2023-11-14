@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="70dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/spCard"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_vertical"
+                android:elevation="5dp"
+                app:cardCornerRadius="10dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:lottie_rawRes="@raw/animation4"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"/>
+            </androidx.cardview.widget.CardView>
+
+          <androidx.appcompat.widget.LinearLayoutCompat
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical"
+              android:layout_marginStart="10dp"
+              android:orientation="vertical">
+
+              <androidx.appcompat.widget.AppCompatTextView
+                  android:id="@+id/spName"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/foddie_hut"
+                  android:layout_gravity="center_horizontal"
+                  android:textColor="@color/green"
+                  android:textSize="18sp"
+                  android:fontFamily="@font/open_sans_samibold"
+                  android:textStyle="bold"/>
+
+              <androidx.appcompat.widget.LinearLayoutCompat
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  android:orientation="horizontal">
+
+                  <androidx.appcompat.widget.AppCompatImageView
+                      android:layout_width="20dp"
+                      android:layout_height="20dp"
+                      android:src="@drawable/location_ic"
+                      android:tint="@color/green"/>
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                      android:id="@+id/mainLocation"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/chandigarh"
+                      android:textColor="@color/light_black"
+                      android:textSize="14sp"
+                      android:textStyle="bold"
+                      android:layout_marginStart="5dp"
+                      android:fontFamily="@font/open_sans_samibold"/>
+              </androidx.appcompat.widget.LinearLayoutCompat>
+          </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/notification"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="20dp"
+                    android:tint="@color/green"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/notifiaction_ic"
+                    android:background="?selectableItemBackground"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.Toolbar>
+
+    <fragment
+        android:id="@+id/fragmentContainerView2"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bottom_navi"
+        app:navGraph="@navigation/navigation" />
+
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navi"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:elevation="20dp"
+                android:layout_alignParentBottom="true"
+                app:itemIconTint="@color/iconcolor"
+                app:itemTextColor="@color/iconcolor"
+                android:background="@android:color/transparent"
+                app:menu="@menu/menu" />
+
+
+</RelativeLayout>

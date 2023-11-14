@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.FoddieFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="15dp">
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/image_slider"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            app:iss_auto_cycle="true"
+            app:iss_period="2000"
+            app:iss_delay="2000"
+            app:iss_text_align="CENTER"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearView"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cardView">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/food_ic"
+            android:tint="@color/green"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/explore_your_favourite_food"
+            android:textColor="@color/dark_black"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/open_sans_samibold"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="18dp"
+        android:elevation="5dp"
+        android:background="?selectableItemBackground"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:layout_below="@+id/cardView"
+        app:cardCornerRadius="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_menu"
+            android:textColor="@color/green"
+            android:textSize="12sp"
+            android:paddingStart="7dp"
+            android:paddingEnd="7dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/open_sans_samibold"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recViewPopular"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@+id/linearView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"/>
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

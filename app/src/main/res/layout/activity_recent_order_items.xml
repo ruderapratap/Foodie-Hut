@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.RecentOrderItemsActivity">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/back_btn"
+        android:background="@color/tranparent"
+        android:tint="@color/green"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/spName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recent_order"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        android:fontFamily="@font/open_sans_samibold"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recView_recentOrder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/spName"
+        tools:listitem="@layout/recentbuy_item"
+        android:scrollbars="none"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

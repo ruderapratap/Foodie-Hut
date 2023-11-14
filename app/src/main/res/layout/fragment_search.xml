@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Fragments.SearchFragment">
+    
+   <androidx.appcompat.widget.SearchView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/bg_search"
+       android:layout_marginStart="15dp"
+       android:layout_marginEnd="15dp"
+       android:id="@+id/searchView"
+       android:layout_marginTop="5dp"
+       app:queryBackground="@color/tranparent"
+       app:iconifiedByDefault="false"
+       app:queryHint="@string/what_do_you_want_to_order"
+       app:searchIcon="@drawable/search_ic"/>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:id="@+id/recView_Search"
+       android:layout_marginTop="5dp"
+       android:layout_height="wrap_content"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

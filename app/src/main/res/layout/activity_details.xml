@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.DetailsActivity">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/food_image"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/pizza"
+            android:scaleType="centerCrop"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/multiply_ic"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/tranparent"
+            android:tint="@color/green"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayout"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ruppe_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r"
+                android:textSize="18sp"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:fontFamily="@font/open_sans_bold"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/foodPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="250"
+                android:maxLength="9"
+                android:layout_marginStart="2dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:fontFamily="@font/open_sans_samibold"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/foodName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/food_name"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/open_sans_samibold"
+                android:textStyle="bold"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/short_description"
+        android:textColor="@color/dark_black"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/open_sans_samibold"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/descriptionTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/food_is_one_of_the_basic_necessities_of_life_food_contains_nutrients_substances_essential_for_the_growth_repair_and_maintenance_of_body_tissues_and_for_the_regulation_of_vital_processes_nutrients_provide_the_energy_our_bodies_need_to_function_the_energy_in_food_is_measured_in_units_called_calories"
+        android:textColor="@color/green"
+        android:textSize="14sp"
+        android:maxLines="6"
+        android:ellipsize="end"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/open_sans_samibold"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ingredients"
+        android:textColor="@color/dark_black"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/open_sans_samibold"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ingredientsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_1nd_item_n2nd_item_n3rd_item"
+        android:textColor="@color/green"
+        android:textSize="14sp"
+        android:maxLines="5"
+        android:ellipsize="end"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/open_sans_samibold"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addToCartBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/lg5"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/greenbuttongradiant"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/add_to_cart"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>
